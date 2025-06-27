@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gifted's Weather Dashboard</title>
+    <link rel="stylesheet" href="weather.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="weather-background">
+      <div class="animation-container">
+        <!-- Weather animation elements will be added here dynamically -->
+      </div>
+    </div>
+    '
+    <div class="container">
+      <header>
+        <h1>Gifted's Weather Dashboard</h1>
+        <div class="search-box">
+          <input type="text" placeholder="Search Nigerian city..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </header>
+      '
+      <main>
+        <section class="current-weather">
+          <div class="weather-info">
+            <h2 class="city">Lagos, Nigeria</h2>
+            <div class="time-date">
+              <div class="live-time">12:00:00 PM</div>
+              <div class="date">Monday, January 15</div>
+            </div>
+            <div class="temperature">
+              <span class="temp">28°C</span>
+              <div class="weather-icon-container">
+                <div class="weather-animation"></div>
+                <img src="" alt="weather icon" class="weather-icon" />
+              </div>
+            </div>
+            <div class="weather-description">Partly Cloudy</div>
+            <div class="weather-details">
+              <div class="detail">
+                <i class="fas fa-water"></i>
+                <span>Humidity: 75%</span>
+              </div>
+              <div class="detail">
+                <i class="fas fa-wind"></i>
+                <span>Wind: 12 km/h</span>
+              </div>
+              <div class="detail">
+                <i class="fas fa-temperature-high"></i>
+                <span>Feels like: 30°C</span>
+              </div>
+              <div class="detail">
+                <i class="fas fa-compress-arrows-alt"></i>
+                <span>Pressure: 1015 hPa</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="weather-chart">
+            <canvas id="hourlyChart"></canvas>
+          </div>
+        </section>
+
+        <section class="forecast">
+          <h3>5-Day Forecast</h3>
+          <div class="forecast-container">
+            <!-- Forecast cards will be added dynamically -->
+          </div>
+        </section>
+
+        <section class="popular-cities">
+          <h3>Popular Cities</h3>
+          <div class="cities-grid">
+            <button class="city-btn" data-city="Lagos">
+              <i class="fas fa-city"></i>
+              Lagos
+            </button>
+            <button class="city-btn" data-city="Abuja">
+              <i class="fas fa-landmark"></i>
+              Abuja
+            </button>
+            <button class="city-btn" data-city="Kano">
+              <i class="fas fa-mosque"></i>
+              Kano
+            </button>
+            <button class="city-btn" data-city="Port Harcourt">
+              <i class="fas fa-ship"></i>
+              Port Harcourt
+            </button>
+            <button class="city-btn" data-city="Ibadan">
+              <i class="fas fa-building"></i>
+              Ibadan
+            </button>
+            <button class="city-btn" data-city="Enugu">
+              <i class="fas fa-mountain"></i>
+              Enugu
+            </button>
+          </div>
+        </section>
+
+        <section class="weather-alerts">
+          <h3>Weather Alerts</h3>
+          <div class="alerts-container">
+            <!-- Weather alerts will be added dynamically -->
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footer-content">
+          <p>Data provided by OpenWeather API</p>
+          <p>Last updated: <span class="last-update">Just now</span></p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Add Chart.js for weather charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>
